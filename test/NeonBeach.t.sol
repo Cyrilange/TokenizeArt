@@ -9,13 +9,13 @@ contract NeonBeachTest is Test {
     address public owner = address(1);
 
     function setUp() public {
-        // On se fait passer pour l'owner pour déployer le contrat
+        
         vm.prank(owner);
         neonBeach = new NeonBeach();
     }
 
     function testContractNameAndSymbol() public view {
-        // On vérifie que le nom et le symbole sont corrects
+        
         assertEq(neonBeach.name(), "TokenizerArt");
         assertEq(neonBeach.symbol(), "NEON");
     }
