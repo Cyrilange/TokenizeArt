@@ -5,7 +5,9 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract TokenizerArt is ERC721,  ERC721URIStorage, Ownable {
+
+
+contract NeonBeach is ERC721,  ERC721URIStorage, Ownable {
   //no arg so we dont need them during the deployment 
     uint256 private _nextTokenId;  //because nft are non fungible they need a unique id
     constructor()  

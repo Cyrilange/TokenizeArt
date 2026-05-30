@@ -1,24 +1,22 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.13;
+pragma solidity ^0.8.20;
 
 import {Test} from "forge-std/Test.sol";
-import {Counter} from "../src/Counter.sol";
+import {NeonBeach} from "../code/NeonBeach.sol";
 
-contract CounterTest is Test {
-    Counter public counter;
+contract NeonBeachTest is Test {
+    NeonBeach public neonBeach;
+    address public owner = address(1);
 
     function setUp() public {
-        counter = new Counter();
-        counter.setNumber(0);
+        // On se fait passer pour l'owner pour déployer le contrat
+        vm.prank(owner);
+        neonBeach = new NeonBeach();
     }
 
-    function test_Increment() public {
-        counter.increment();
-        assertEq(counter.number(), 1);
-    }
-
-    function testFuzz_SetNumber(uint256 x) public {
-        counter.setNumber(x);
-        assertEq(counter.number(), x);
+    function testContractNameAndSymbol() public view {
+        // On vérifie que le nom et le symbole sont corrects
+        assertEq(neonBeach.name(), "TokenizerArt");
+        assertEq(neonBeach.symbol(), "NEON");
     }
 }
