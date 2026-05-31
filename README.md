@@ -31,6 +31,7 @@ To comply with Ethereum standards, the token implements the **ERC-721** standard
 * **Framework:** **foundry** explication of foundry down there.
 * **Language:** **Solidity (^0.8.20)**. Using a modern compiler version ensures native protection against arithmetic overflows/underflows without needing external libraries like SafeMath.
 
+
 ---
 
 ##  Metadata Architecture (IPFS)
@@ -241,3 +242,7 @@ Sensitive values saved to: /home/csalamithome/TokenizeArt/cache/NeonBeach.s.sol/
 
 
 ![alt text](image.png)
+
+# FRONTEND
+
+html - css -javascript - ether.js

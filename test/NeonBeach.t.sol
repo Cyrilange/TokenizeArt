@@ -15,20 +15,19 @@ contract NeonBeachTest is Test {
         neonBeach = new NeonBeach();
     }
 
-    function testContractNameAndSymbol() public view {
+    function testContractNameAndSymbol() public  {
         
         assertEq(neonBeach.name(), "TokenizerArt");
-        assertEq(neonBeach.symbol(), "NEON");
+        assertEq(neonBeach.symbol(), "neon beach");
     }
 
-    function testMintSucces() public view {
+    function testMintSucces() public  {
         string memory sampleUri = "ipfs://bafybeiardzgyf3ifrcixf7ywmb2jvqzymyxipzyd55xsts5ueta3vt72fy";
         
-    
-        vm.prank(user1);
-        neonBeach.safe_mint(user1, 0, sampleUri);
+        vm.prank(owner);
+        neonBeach.safeMint(user1, sampleUri);
 
-
+        // Assertions checking if state updated correctly
         assertEq(neonBeach.balanceOf(user1), 1);
         assertEq(neonBeach.ownerOf(0), user1);
         assertEq(neonBeach.tokenURI(0), sampleUri);
