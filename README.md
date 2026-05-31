@@ -238,7 +238,10 @@ Transactions saved to: /home/csalamithome/TokenizeArt/broadcast/NeonBeach.s.sol/
 
 Sensitive values saved to: /home/csalamithome/TokenizeArt/cache/NeonBeach.s.sol/11155111/run-latest.json
 
+# Anvil
 
+write | anvil  | in yout terminal , it is like a false blockchain
+open a new terminal and write | forge create code/NeonBeach.sol:NeonBeach --rpc-url http://127.0.0.1:8545 --private-key aPrivateKey
 
 
 ![alt text](image.png)
